@@ -4,7 +4,7 @@ A collection of resources for Program Committee chairs.
 
 ## [Scripts for Managing a PC meeting over Zoom](PC-meeting-scripts/)
 
-(In the director PC-meeting-scripts)
+See the directory [PC-meeting-scripts/](PC-meeting-scripts/).
 
 ## [Reviewing guidelines for Program Committee members (for PLDI'16)](https://emeryblogger.com/2018/03/22/reviewing-guidelines-for-program-committee-members/)
 
