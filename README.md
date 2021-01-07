@@ -2,9 +2,13 @@
 
 A collection of resources for Program Committee chairs.
 
-## [REVIEWING GUIDELINES FOR PROGRAM COMMITTEE MEMBERS (for PLDI'16)](https://emeryblogger.com/2018/03/22/reviewing-guidelines-for-program-committee-members/)
+## [Scripts for Managing a PC meeting over Zoom](PC-meeting-scripts/)
 
-## conflict-vetter.py
+(In the director PC-meeting-scripts)
+
+## [Reviewing guidelines for Program Committee members (for PLDI'16)](https://emeryblogger.com/2018/03/22/reviewing-guidelines-for-program-committee-members/)
+
+## Conflict vetting
 
 `conflict-vetter.py` finds all stated conflicts from authors and mails them for vetting to reviewers
   - used for checking for bogus conflicts / conflict engineering.
@@ -39,7 +43,5 @@ If you are using 2FA for Google mail, you can generate an App Password for use h
 
 As a side effect, this command produces an output file `uidmap.csv`, which you can use to reverse-lookup
 paper numbers from generated (encrypted) paper uids.
-
-## [Scripts for Managing a PC meeting over Zoom](PC-meeting-scripts/)
 
 
