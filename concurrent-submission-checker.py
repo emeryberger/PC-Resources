@@ -20,7 +20,7 @@ The chair of the second conference runs it to get title hashes, then
 runs it again with --other-conference to compare the two sets of title
 hashes.
 """)
-parser.add_argument('--conference', help='conference name used as a prefix of csv file names exported by HotCRP, e.g., nsdi21fall')
+parser.add_argument('conference', help='conference name used as a prefix of csv file names exported by HotCRP, e.g., nsdi21fall')
 parser.add_argument('--other-conference', help='(optional) other conference name to compare to; if you just want to produce title hashes to send to another chair, leave out this argument')
 
 args = parser.parse_args()

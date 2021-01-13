@@ -10,7 +10,7 @@ import os
 import re
 
 parser = argparse.ArgumentParser('find-topicless')
-parser.add_argument('--conference', help='conference name used as a prefix of csv file names exported by HotCRP, e.g., osdi21')
+parser.add_argument('conference', help='conference name used as a prefix of csv file names exported by HotCRP, e.g., osdi21')
 
 args = parser.parse_args()
 if not args.conference:
@@ -31,7 +31,7 @@ def find_topicless():
     infile_name = args.conference + "-pcinfo.csv"
 
     if not os.path.exists(infile_name):
-        describe_how_to_get_data(args.conference, infile_name)
+        describe_how_to_get_pcinfo(args.conference, infile_name)
         sys.exit(-1)
 
     topicless_pc_list = []
