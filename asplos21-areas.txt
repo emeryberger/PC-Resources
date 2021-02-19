@@ -1,0 +1,91 @@
+3D integration
+accelerators
+AI accelerators
+applications
+approximate computing
+architecture
+ASICs
+benchmarking, simulation, and emulation technologies
+big data
+binary instrumentation
+branch prediction
+case studies of real-world or experimental systems
+cloud computing systems
+cloud programming models and applications
+code generation and synthesis
+compiler techniques and optimizations
+concurrency
+data center systems architecture
+data management
+database accelerators
+debugging correctness and performance
+deep learning systems
+design tools (synthesis, hardware generation, etc)
+distributed systems
+domain-specific languages
+dynamic analysis
+embedded systems, IoT, edge computing
+energy &amp; power
+FGPA software &amp; tools
+file systems
+formal verification &amp; testing
+FPGA architectures
+GPU microarchitecture
+GPU software
+GPU systems
+graph processing
+hardware for machine learning
+hardware security
+heterogeneous architectures and accelerators
+high-performance computing
+human factors, user evaluations, usability
+HW/SW co-design
+interconnects (chip, system, and datacenter scale)
+intermittent computing
+Internet services
+machine learning for systems
+main memory: controllers, scheduling, architcture, devices
+managed languages and runtimes
+memory consistency models
+memory management and garbage collection
+memory/storage technologies and architectures
+mobile systems
+molecular computing
+multicore architectures and systems
+multiprocessors
+networking and switch architecture/programming (off-chip networks)
+non-ML emerging applications (PL, architecture and system support)
+non-traditional computing systems, including emerging devices, bio, molecular, etc.
+on-chip networks
+open source hardware
+operating systems
+parallelism and concurrency
+performance and quality of service
+persistent memory
+PL and system support for GPUs
+PL, architecture and system support for machine learning
+power, energy, and thermal management
+privacy
+processor microarchitecture
+programming models, languages, and compilation
+quantum computing (hardware, software, systems)
+real-time systems
+reconfigurable computing
+reliability and availability
+runtime systems
+scheduling and resource management (multi-node)
+scheduling and resource management (single node)
+security
+serverless and functions-as-a-service
+shared memory systems (including cache coherence)
+software security
+static analysis
+storage systems
+sustainability
+symbolic computation
+synchronization
+systems for machine learning
+tensor computation (dense and sparse)
+thermal management
+trustworthy systems
+virtualization
