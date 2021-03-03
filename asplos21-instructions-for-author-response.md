@@ -2,7 +2,7 @@
 
 This document is intended to help you write the most effective author response possible.
 
-For ASPLOS'21, the author response will not be limited in length. However, there will be a **soft limit of 500 words. Reviewers will not be required to read more than this number of words**. However, they will be interested in reading your responses to their specific questions.
+For ASPLOS'21, the author response will not be limited in length. There will be a **soft limit of 500 words. Reviewers will not be required to read more than this number of words**. However, they will be interested in reading your responses to their specific questions.
 
 **Important note**: your response is not allowed to introduce new content in the paper, such as recent and improved experimental results. Your response should NOT reveal your identity or your affiliation, directly or indirectly, as ASPLOS is a fully double-blind conference.
 
