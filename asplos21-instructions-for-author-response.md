@@ -4,11 +4,11 @@ This document is intended to help you write the most effective author response p
 
 For ASPLOS'21, the author response will not be limited in length. However, there will be a **soft limit of 500 words. Reviewers will not be required to read more than this number of words**. However, they will be interested in reading your responses to their specific questions.
 
-**Important note: your response is not allowed to introduce new content in the paper, such as recent and improved experimental results. Your response should NOT reveal your identity or your affiliation, directly or indirectly, **as ASPLOS is a fully double-blind conference.
+**Important note: your response is not allowed to introduce new content in the paper, such as recent and improved experimental results. Your response should NOT reveal your identity or your affiliation, directly or indirectly, **as ASPLOS is a fully double-blind conference**.
 
-_Note: You will receive 5 or more reviews in the Round 2 phase. Due to circumstances beyond our control (e.g., reviewer health emergencies), there is a small number of reviews that may arrive late. Please periodically re-check the submission site during the rebuttal period. _
+_Note_: You will receive 5 or more reviews in the Round 2 phase. Due to circumstances beyond our control (e.g., reviewer health emergencies), there is a small number of reviews that may arrive late. Please periodically re-check the submission site during the rebuttal period.
 
-_Note: You may also have a few Round 1-only reviews, which have comments and questions but no score in the “R2 Overall Merit” field. This is normal — by design, there are more reviewers for extended abstracts than for the full papers. Please do answer any key questions these reviews bring up. _
+_Note_: You may also have a few Round 1-only reviews, which have comments and questions but no score in the “R2 Overall Merit” field. This is normal — by design, there are more reviewers for extended abstracts than for the full papers. Please do answer any key questions these reviews bring up.
 
 
 ## Process
@@ -63,7 +63,7 @@ _Example of approach 2b:_
 
     ### C3: Experimental Platform?
 
-See B1.
+    See B1.
 ```
 
 
@@ -72,7 +72,7 @@ See B1.
 
 First, while writing a response is not required, it's _highly recommended_. A lack of a response is often interpreted to mean the authors implicitly admit the validity of any criticism or concerns raised by reviewers. It can quickly turn into a reason for rejection — and it almost inevitably does. A failure to write a response will almost certainly doom a paper.
 
-Second, for the reasons given above, it's a very good idea to make sure to answer as many **important **questions as possible posed by the reviewers, especially the ones called out as "Questions to Authors" (reviewers are specifically asked to put their questions there, but sometimes the questions are also in the main comments, so make sure to look there, too!).
+Second, for the reasons given above, it's a very good idea to make sure to answer as many **important** questions as possible posed by the reviewers, especially the ones called out as "Questions to Authors" (reviewers are specifically asked to put their questions there, but sometimes the questions are also in the main comments, so make sure to look there, too!).
 
 Third, most papers have a mix of reviews ranging from highly positive to somewhat or even quite negative. Papers generally need an enthusiastic "champion" to be accepted. You should strive to help your champion advocate for your paper (it will be obvious based on grades who this reviewer or reviewers are). Similarly, there may be detractors of your paper. Try to address their concerns factually and constructively. Ideally, you can provide compelling answers that address all their concerns so that they are no longer opposed to the paper's acceptance.
 
