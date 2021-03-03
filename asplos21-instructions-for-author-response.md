@@ -46,9 +46,10 @@ _Example:_
 
 
 
-2. In the remainder of your response, we _recommend_ that you structure your response in one of two ways: \
+2. In the remainder of your response, we _recommend_ that you structure your response in one of two ways:
 
     1. Include responses to each individual reviewer's questions, _with the most important and most frequent questions addressed first_, as above.
+    
     2. Alternatively, organize your response _by reviewer_. Include references to responses (when there are repeated questions) by labeling each response with a letter and number (as in, "B1"). 
 
 _Example of approach 2b:_
