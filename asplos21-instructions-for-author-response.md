@@ -4,7 +4,7 @@ This document is intended to help you write the most effective author response p
 
 For ASPLOS'21, the author response will not be limited in length. However, there will be a **soft limit of 500 words. Reviewers will not be required to read more than this number of words**. However, they will be interested in reading your responses to their specific questions.
 
-**Important note: your response is not allowed to introduce new content in the paper, such as recent and improved experimental results. Your response should NOT reveal your identity or your affiliation, directly or indirectly, **as ASPLOS is a fully double-blind conference**.
+**Important note**: your response is not allowed to introduce new content in the paper, such as recent and improved experimental results. Your response should NOT reveal your identity or your affiliation, directly or indirectly, as ASPLOS is a fully double-blind conference.
 
 _Note_: You will receive 5 or more reviews in the Round 2 phase. Due to circumstances beyond our control (e.g., reviewer health emergencies), there is a small number of reviews that may arrive late. Please periodically re-check the submission site during the rebuttal period.
 
@@ -33,7 +33,11 @@ _Example:_
 ```
     # Performance Results [A, B]
 
-    We inadvertently left off this detail of our evaluation: all reported execution times are the average of 1,024 runs, after discarding the first warm-up run. We will also report variance, which in all cases was below 0.001%.
+    We inadvertently left off this detail of our evaluation: all
+    reported execution times are the average of 1,024 runs, after
+    discarding the first warm-up run. We will also report variance,
+    which in all cases was below 0.001%.
+
 ```
 
 
@@ -55,7 +59,11 @@ _Example of approach 2b:_
 
     ### B1: Experimental Platform?
 
-    To ensure repeatable runs, our experimental platform was placed in a seismically-isolated climate controlled room set at 50 degrees Fahrenheit (10 degrees Celsius, 283.15 Kelvin, -9.77 Réaumur). Hyperthreading was disabled. Background tasks were killed with extreme prejudice.
+    To ensure repeatable runs, our experimental platform was placed in
+    a seismically-isolated climate controlled room set at 50 degrees
+    Fahrenheit (10 degrees Celsius, 283.15 Kelvin, -9.77
+    Réaumur). Hyperthreading was disabled.  Background tasks were
+    killed with extreme prejudice.
 
     # Reviewer C
 
