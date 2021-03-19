@@ -12,6 +12,14 @@ See the directory [PC-meeting-scripts/](PC-meeting-scripts/).
 
 ## [Check arXiv for blackout period violations](check-arxiv.py)
 
+The script [check-arxiv.py](check-arxiv.py) makes it easy to check
+arXiv for papers that violate a blackout period (if your conference
+has one). Takes as input a list of titles (via stdin) and outputs
+violations.  Currently you need to modify the script to set the
+submission date and optionally change the delta (time before and after
+the submission date).
+
+
 ## Conflict vetting
 
 `conflict-vetter.py` finds all stated conflicts from authors and mails them for vetting to reviewers
