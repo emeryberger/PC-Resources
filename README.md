@@ -8,6 +8,10 @@ See the directory [PC-meeting-scripts/](PC-meeting-scripts/).
 
 ## [Reviewing guidelines for Program Committee members (for PLDI'16)](https://emeryblogger.com/2018/03/22/reviewing-guidelines-for-program-committee-members/)
 
+## [Instructions for Authors for Author Responses (for ASPLOS'21)](asplos21-instructions-for-author-response.md)
+
+## [Check arXiv for blackout period violations](check-arxiv.py)
+
 ## Conflict vetting
 
 `conflict-vetter.py` finds all stated conflicts from authors and mails them for vetting to reviewers
