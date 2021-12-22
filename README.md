@@ -146,3 +146,29 @@ It generates the following files in the directory `output/`:
 * `all_first_pages.pdf` contains the first pages of all submissions.  This is useful to scan for accidental inclusion of author names and affiliations in a conference where submissions should be blind.
 * `all_papers_stenciled.pdf` contains the first, `n`th, and `n+1`st pages of all submissions, where `n` is the page limit.  These pages are overlayed with a stencil showing vertical 12-point-high stripes, so that one can visually inspect for papers that use leading that isn't 12-point.  The stencils on the `n+1`st pages are red instead of blue, allowing the chair to scan for cases where the paper material continues beyond the page limit.
 * For each submission, a file containing the stenciled version of just that submission.
+
+## Review sizer
+
+The `review-sizer.py` script generates a file `reviews_by_count.html` listing all reviews from shortest to longest. The chair can view this in a browser to check for insufficient reviews and prod their authors to expand them.  A sample command line is:
+```
+python3 review-sizer.py osdi21
+```
+
+If you want to customize the fields to include in the count, use the `--fields` command-line argument to specify the field name selector as a regular expression.  The default is as if you included `--fields "[cC]omment|[sS]trength|[wW]eakness|[qQ]uestion"`.
+
+## Statistics reporter for chair message
+
+Chairs are often called upon to write a "Message from the Chair" for inclusion in the proceedings.  Such a message often contains statistics about the reviews and online discussions.  These two scripts produce such statistics.
+
+The `comment-word-counter.py` script reports statistics about the comments PC members posted as part of discussions (not as part of review forms).  It reports how many comments there were, as well as how many total words there were in those comments.
+A sample command line is:
+```
+python3 comment-word-counter.py osdi21
+```
+
+The `review-word-counter.py` script reports how many words were in the reviews PC members submitted.  Note, however, that it uses a downloaded zip file of reviews, and that zip file doesn't include reviews for papers the downloader is conflicted with.  A sample command line is:
+```
+python3 review-word-counter.py osdi21
+```
+
+If you want to customize the fields to include in the count, use the `--fields` command-line argument to specify the field name selector as a regular expression.  The default is as if you included `--fields "[sS]ummary|[cC]omment|[sS]trength|[wW]eakness|[qQ]uestion"`.
