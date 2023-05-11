@@ -49,7 +49,7 @@ The command will look something like this:
 % python3 conflict-vetter.py --conference asplos21 --hashcode hellokitty --your-name "Emery Berger" --your-email "emery.berger@gmail.com" --your-password goodbyedoggy --form-url "https://forms.gle/someform"
 ```
 
-If you are using 2FA for Google mail, you can generate an App Password for use here: [https://security.google.com/settings/security/apppasswords](https://security.google.com/settings/security/apppasswords)
+If you are using 2FA for Google mail, you can generate an "app password" by going to [https://myaccount.google.com/signinoptions/two-step-verification](https://myaccount.google.com/signinoptions/two-step-verification), scrolling to the bottom, and clicking "App passwords".
 
 **NOTE**: this script will only actually send mail if you explicitly add the command-line option `--really-send`.
 
@@ -82,7 +82,7 @@ python3 explain-conflicts.py --conference=osdi21 --hash-salt=hellokitty
 
 4. The chair creates a Google Forms form allowing PC members to submit the UIDs of unexplained conflicts that even they can't explain.  This should be a form with just two fields: the PC member's email and a list of space-separated UIDs.  (Don't request comma-separated UIDs, since the use of commas with long integers confuses Google's input parsing.)
 
-5. If the chair is using 2FA for Google mail, they generate an App Password for use here: [https://security.google.com/settings/security/apppasswords](https://security.google.com/settings/security/apppasswords)
+5. If the chair is using 2FA for Google mail, they generate an "app password" by going to [https://myaccount.google.com/signinoptions/two-step-verification](https://myaccount.google.com/signinoptions/two-step-verification), scrolling to the bottom, and clicking "App passwords".
 
 6. The chair runs the `mail-pc-re-conflicts.py` script to ask PC members to look over the unexplained conflicts and confirm ones that they also can't explain.  An example command line is:
 ```
