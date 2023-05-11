@@ -78,7 +78,7 @@ email,affiliation
 python3 explain-conflicts.py --conference=osdi21 --hash-salt=hellokitty
 ```
 
-3. The chair manually looks over the unexplained-conflicts file to remove any they understand and can explain.
+3. Optional: The chair manually looks over the unexplained-conflicts file to remove any they understand and can explain. Each row in this file corresponds to one paper number and one PC member, where the script can't figure out why that PC member is conflicted with any of the authors of that paper. Sometimes, the script has a guess about which of the authors is the most likely explanation for the unexplained conflict, because that author submitted *another* paper to this conference that marked that same PC member as a conflict. The script indicates this with `multipleconflicts(<author name>)`.
 
 4. The chair creates a Google Forms form allowing PC members to submit the UIDs of unexplained conflicts that even they can't explain.  This should be a form with just two fields: the PC member's email and a list of space-separated UIDs.  (Don't request comma-separated UIDs, since the use of commas with long integers confuses Google's input parsing.)
 
@@ -89,9 +89,9 @@ python3 explain-conflicts.py --conference=osdi21 --hash-salt=hellokitty
 python3 mail-pc-re-conflicts.py --conference=osdi21 --sender-name="Jay Lorch" --sender-email="jaylorch@gmail.com" --sender-password="abcdefghijklmnop" --reply-to="osdi21chairs@usenix.org" --subject="[OSDI '21] Conflicts to vet" --form-url="https://forms.gle/whatevergooglegivesyou" --signature="Angela Demke Brown and Jay Lorch, OSDI '21 co-chairs" --deadline="3pm Pacific on December 7" --cc="osdi21chairs@usenix.org"
 ```
 
-NOTE:  This will print the emails to standard output, but won't actually send any emails. If the chair is happy with these, they should rerun the above command with the extra argument `--really-send`.
+NOTE:  This will print the emails to standard output, but won't actually send any emails. If the chair is happy with these, they rerun the above command with the extra argument `--really-send`.
 
-7. The chair emails all the PC members via HotCRP telling them to look in their inboxes for the email asking for confirmation of unexplained conflicts, and to check their junk-mail folders if they don't see it. This is useful because PC members have likely whitelisted the HotCRP mail server, but not necessarily the personal email used to send these emails.
+7. Optional: The chair emails all the PC members via HotCRP telling them to look in their inboxes for the email asking for confirmation of unexplained conflicts, and to check their junk-mail folders if they don't see it. This is useful because PC members have likely whitelisted the HotCRP mail server, but not necessarily the personal email used to send these emails.
 
 8. The chair waits for a while for the PC to respond.  After the PC members report the UIDs for conflicts they also can't explain, the chair manually uses the Google Forms responses to create a CSV file `confname-reported-uids.csv` file whose first line is:
 ```
