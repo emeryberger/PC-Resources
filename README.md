@@ -97,6 +97,7 @@ NOTE:  This will print the emails to standard output, but won't actually send an
 ```
 email,uid
 ```
+and whose each subsequent line is a PC member's email, a comma, and either a single UID or a space-separated list of UIDs.
 
 9. The chair runs the `investigate-conflicts.py` script to convert these into a decrypted list of conflicts to investigate.  An example command line is:
 ```
