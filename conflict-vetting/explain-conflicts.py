@@ -249,10 +249,15 @@ class ConflictsFinder:
         self.extra_affiliations = defaultdict(list)
         with open(infile_name, 'r') as infile:
             reader = csv.DictReader(infile, delimiter=',')
-            for row in reader:
-                email = row["email"]
-                affiliation = row["affiliation"]
-                self.extra_affiliations[email].append(affiliation)
+            try:
+                for row in reader:
+                    email = row["email"]
+                    affiliation = row["affiliation"]
+                    self.extra_affiliations[email].append(affiliation)
+            except:
+                print("Error reading %s. Please make sure the first row consists of the 17 characters 'e', 'm', 'a', 'i', 'l', ',', 'a', 'f', 'f', 'i', 'l', 'i', 'a', 't', 'i', 'o', 'n'" % (infile_name))
+                sys.exit(-1)
+                
 
     def parse_authors_file(self):
         infile_name = self.conference + "-authors.csv"

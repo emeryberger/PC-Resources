@@ -41,7 +41,7 @@ parser.add_argument("--subject", help="(optional) subject line for emails; if yo
 parser.add_argument("--signature", help="(optional) signature; if you don't supply this parameter, it will be the sender name")
 parser.add_argument("--deadline", help="(optional) when PC members should fill out the form by; if you don't supply this parameter, the email won't specify a deadline")
 parser.add_argument("--cc", help="(optional) email address to cc on each email")
-parser.add_argument("--no-mail", help="don't send mail, just print all the mails that would be sent", action="store_true")
+parser.add_argument("--really-send", help="actually send mail, don't just print all the mails that would be sent", action="store_true")
 
 def describe_how_to_get_pcinfo(conference, file_name):
     print('Could not find a file in the current directory named ' + file_name)
@@ -89,7 +89,7 @@ class PCMember:
 
 
 class EmailSender:
-    def __init__(self, conference, form_url, sender_name, sender_email, sender_password, reply_to, subject, signature, deadline, cc, no_mail):
+    def __init__(self, conference, form_url, sender_name, sender_email, sender_password, reply_to, subject, signature, deadline, cc, really_send):
         self.conference = conference
         self.form_url = form_url
         self.sender_name = sender_name
@@ -101,7 +101,7 @@ class EmailSender:
         self.signature = signature if signature else sender_name
         self.deadline = deadline
         self.cc = cc
-        self.send_mail = not no_mail
+        self.send_mail = really_send
         self.pcinfo = {}
         self.paper_authors = defaultdict(list)
 
@@ -114,6 +114,8 @@ class EmailSender:
         self.send_emails()
         if self.send_mail:
             self.server.quit()
+        else:
+            print("*** No mails sent. To send mails, use --really-send ***")
 
     def get_pcemails(self):
         infile_name = self.conference + "-pcinfo.csv"
@@ -217,11 +219,11 @@ You don't need to report conflicts that you recognize as legitimate. And you don
             self.server.sendmail(self.sender_email, recipient, msg)
             print("Mail sent to %s" % (recipient))
         else:
-            print("***\n\nTo: %s\n%s" % (recipient, msg))
+            print("***\n\nIf you run with --really-send, the following will be sent to %s:\n%s" % (recipient, msg))
 
 args = parser.parse_args()
 
 mail_sender = EmailSender(args.conference, args.form_url, args.sender_name, args.sender_email,
                           args.sender_password, args.reply_to, args.subject, args.signature,
-                          args.deadline, args.cc, args.no_mail)
+                          args.deadline, args.cc, args.really_send)
 mail_sender.run()
