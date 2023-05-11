@@ -78,20 +78,25 @@ class ConflictInvestigator:
         self.paper_ids_to_investigate = set()
         with open(self.reported_uids_file, 'r') as infile:
             reader = csv.DictReader(infile, delimiter=',')
-            for row in reader:
-                email = row["email"]
-                uid = row["uid"]
-                if email not in self.conflicts_by_email_and_uid:
-                    print("ERROR:  Could not find email %s in %s" % (email, self.unexplained_conflicts_file))
-                    print("        It's possible the PC member entered a different email than the one we used.")
-                    sys.exit(-1)
-                if uid not in self.conflicts_by_email_and_uid[email]:
-                    print("ERROR:  Could not find UID %s for %s in %s" % (uid, email, self.unexplained_conflicts_file))
-                    print("        It's possible the PC member mistyped the UID slightly.")
-                    sys.exit(-1)
-                conflict = self.conflicts_by_email_and_uid[email][uid]
-                self.conflicts_to_investigate.append(conflict)
-                self.paper_ids_to_investigate.add(conflict.paper_id)
+            try:
+                for row in reader:
+                    email = row["email"]
+                    uid = row["uid"]
+                    if email not in self.conflicts_by_email_and_uid:
+                        print("ERROR:  Could not find email %s in %s" % (email, self.unexplained_conflicts_file))
+                        print("        It's possible the PC member entered a different email than the one we used.")
+                        sys.exit(-1)
+                    if uid not in self.conflicts_by_email_and_uid[email]:
+                        print("ERROR:  Could not find UID %s for %s in %s" % (uid, email, self.unexplained_conflicts_file))
+                        print("        It's possible the PC member mistyped the UID slightly.")
+                        sys.exit(-1)
+                    conflict = self.conflicts_by_email_and_uid[email][uid]
+                    self.conflicts_to_investigate.append(conflict)
+                    self.paper_ids_to_investigate.add(conflict.paper_id)
+            except:
+                print("Error reading %s. Please make sure the first row consists of the 9 characters 'e', 'm', 'a', 'i', 'l', ',', 'u', 'i', 'd'" % (self.reported_uids_file))
+                sys.exit(-1)
+
 
     def print_paper_ids_to_investigate(self):
         paper_ids = list(self.paper_ids_to_investigate)
