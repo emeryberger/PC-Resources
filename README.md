@@ -89,17 +89,21 @@ python3 explain-conflicts.py --conference=osdi21 --hash-salt=hellokitty
 python3 mail-pc-re-conflicts.py --conference=osdi21 --sender-name="Jay Lorch" --sender-email="jaylorch@gmail.com" --sender-password="abcdefghijklmnop" --reply-to="osdi21chairs@usenix.org" --subject="[OSDI '21] Conflicts to vet" --form-url="https://forms.gle/whatevergooglegivesyou" --signature="Angela Demke Brown and Jay Lorch, OSDI '21 co-chairs" --deadline="3pm Pacific on December 7" --cc="osdi21chairs@usenix.org"
 ```
 
-7. The chair waits for a while for the PC to respond.  After the PC members report the UIDs for conflicts they also can't explain, the chair manually uses the Google Forms responses to create a CSV file `confname-reported-uids.csv` file whose first line is:
+NOTE:  This will print the emails to standard output, but won't actually send any emails. If the chair is happy with these, they should rerun the above command with the extra argument `--really-send`.
+
+7. The chair emails all the PC members via HotCRP telling them to look in their inboxes for the email asking for confirmation of unexplained conflicts, and to check their junk-mail folders if they don't see it. This is useful because PC members have likely whitelisted the HotCRP mail server, but not necessarily the personal email used to send these emails.
+
+8. The chair waits for a while for the PC to respond.  After the PC members report the UIDs for conflicts they also can't explain, the chair manually uses the Google Forms responses to create a CSV file `confname-reported-uids.csv` file whose first line is:
 ```
 email,uid
 ```
 
-8. The chair runs the `investigate-conflicts.py` script to convert these into a decrypted list of conflicts to investigate.  An example command line is:
+9. The chair runs the `investigate-conflicts.py` script to convert these into a decrypted list of conflicts to investigate.  An example command line is:
 ```
 python3 investigate-conflicts.py osdi21-unexplainedconflicts.csv osdi21-reported-uids.csv
 ```
 
-9. If the chair began the conflict-vetting process before the final submission deadline (e.g., after the abstract-registration deadline), they may want to do it again after the final submission deadline.  After all, authors may declare more improper conflicts up until that deadline.  So, after the paper-submission deadline (when authors can't change their conflicts any more), the chair runs `find-unexplained-conflicts.py` one more time to get another file, e.g., `10dec/osdi21-unexplainedconflicts.csv`.  The chair then runs the `diff-unexplained-conflicts.py` script to get a list of just the unexplained conflicts from the latter file.  An example command line is:
+10. If the chair began the conflict-vetting process before the final submission deadline (e.g., after the abstract-registration deadline), they may want to do it again after the final submission deadline.  After all, authors may declare more improper conflicts up until that deadline.  So, after the paper-submission deadline (when authors can't change their conflicts any more), the chair runs `find-unexplained-conflicts.py` one more time to get another file, e.g., `10dec/osdi21-unexplainedconflicts.csv`.  The chair then runs the `diff-unexplained-conflicts.py` script to get a list of just the unexplained conflicts from the latter file.  An example command line is:
 ```
 python3 diff-unexplained-conflicts.py 4dec/osdi21-unexplainedconflicts.csv 10dec/osdi21-unexplainedconflicts.csv
 ```
