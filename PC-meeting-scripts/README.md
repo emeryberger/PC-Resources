@@ -1,3 +1,5 @@
+_Note: you might find this more recent set of scripts to be more useful: https://github.com/alexrenda/pc-meeting-zoom-conflicts._
+
 ### Managing a PC meeting over Zoom.
 
 These scripts were written by Breanna Devore-McDonald and Nicolas van Kempen.
